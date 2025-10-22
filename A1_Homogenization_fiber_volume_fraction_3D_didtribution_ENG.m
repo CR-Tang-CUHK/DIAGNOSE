@@ -1,7 +1,7 @@
 clear all;
 clc;
 % Read Excel file and convert to 3D matrix
-filename = '3D_greyscale_voxel_table_of_fiber_masks_top_right_3.4um_cut a section.xls'; % Replace with your Excel filename
+filename = '3D_greyscale_voxel.xls'; % Replace with your Excel filename
 [~, sheets] = xlsfinfo(filename);
 num_sheets = numel(sheets);
 
@@ -148,4 +148,5 @@ function plot_cube(x, y, z, dx, dy, dz, color)
     patch('Vertices', vertices, 'Faces', faces, ...
           'FaceColor', color, 'EdgeColor', 'k', ...
           'FaceAlpha', 0.7, 'EdgeAlpha', 0.5);
+
 end
